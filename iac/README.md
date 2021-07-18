@@ -5,6 +5,8 @@ the same source code generates the same binary, an IaC model generates the same 
 
 
 ![Infra as Code](./imgs/iac.png)
+              
+                       [Provisioning infrastructure as code]
 
 IaC solves the problem of environment drift occurs due to the snowflake effect.
 
