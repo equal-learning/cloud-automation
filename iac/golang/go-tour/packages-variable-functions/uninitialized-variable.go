@@ -1,7 +1,7 @@
 /*
 UNINITIALIZED VARIABLES:
 
-Variables declared without an explicit initial value are given their zero value.
+Variables declared without an explicit initial value are given their zero like values.
 
 The zero value is:
 
