@@ -10,7 +10,7 @@ package main
 
 import "fmt"
 
-type Vertex struct {
+type Vertex struct {  // Two steps process: first declare then use
 	X int
 	Y int
 }
