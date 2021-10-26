@@ -28,18 +28,18 @@ kubebuilder init --domain tutorial.kubebuilder.io    # Configure the API group s
 ## Scaffold a new API by specifying its GVK (Group-Version-Kind)
 kubebuilder create api --group batch --version v1 --kind CronJob   # custom Resource Defination and the Controller
 
-# Review the generated YAMLs (Open API) : note the the generated « Resource requirement (for compute resources) » and the « defaulting »
-# Adapt the metadata/spec/status of the type CronJob in the file api/v1/cronjob_types.go
-# Attention !!  You may have to adpat the kubebuilder marker as well
+## Review the generated YAMLs (Open API) : note the the generated « Resource requirement (for compute resources) » and the « defaulting »
+## Adapt the metadata/spec/status of the type CronJob in the file api/v1/cronjob_types.go
+## Attention !!  You may have to adpat the kubebuilder marker as well
 
-# tidy go the imports
+## tidy go the imports
 go mod tidy
 
-# Run locally
+## Run locally
 make install
 make run ENABLE_WEBHOOKS=false
 
-# Run on the cluster
+## Run on the cluster
 
 make docker-build docker-push IMG=<some-registry>/<project-name>:tag
 make docker-build docker-push IMG=artifactory.toto.io/docker-internal/kube-operators/kubebuilder-cronjob:latest
@@ -50,7 +50,8 @@ make deploy IMG=artifactory.toto.io/docker-internal/kube-operators/kubebuilder-c
 
 kubectl create -f config/samples/batch_v1_cronjob.yaml    # Create a CronJob resource
 
-Useful links to understand the code of this tutorial ::
+##Useful links to understand the code of this tutorial ::
+
 https://kubebuilder.io/
 https://github.com/kubernetes-sigs/kubebuilder/tree/master/docs/book/src/cronjob-tutorial/testdata/project
 https://github.com/kubernetes-sigs/kustomize
