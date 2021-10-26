@@ -1,4 +1,7 @@
 
+# Controller architecture based on kubebuilder framework
+![Contoller architecture](kubebuilder-archi.png)
+
 # Key conepts around Kubernetes APIs
 
 GVK : GroupVersionKind (Corresponds to a given root Go type in package)
