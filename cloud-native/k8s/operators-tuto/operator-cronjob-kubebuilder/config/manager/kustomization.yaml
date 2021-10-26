@@ -1,0 +1,23 @@
+resources:
+- manager.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+- files:
+  - controller_manager_config.yaml
+  name: manager-config
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: controller
+  newName: artifactory.thalesdigital.io/docker-internal/tnmarketplace/kubebuilder-cronjob
+  newTag: latest
+patches:
+- path: imagepullsecret_patch.json
+  target:
+    group: apps
+    kind: Deployment
+    name: controller-manager
+    version: v1
