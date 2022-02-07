@@ -1,6 +1,6 @@
 
 # Controller architecture based on kubebuilder framework
-![Contoller architecture](kubebuilder-archi.png)
+![Contoller architecture](./kubebuilder-archi.png)
 
 # Key conepts around Kubernetes APIs
 
@@ -57,14 +57,14 @@ kubectl create -f config/samples/batch_v1_cronjob.yaml    # Create a CronJob res
 
 ##Useful links to understand the code of this tutorial ::
 
-https://kubebuilder.io/
-https://github.com/kubernetes-sigs/kubebuilder/tree/master/docs/book/src/cronjob-tutorial/testdata/project
-https://github.com/kubernetes-sigs/kustomize
-https://pkg.go.dev/sigs.k8s.io/controller-runtime
-What is scheme :: https://pkg.go.dev/k8s.io/apimachinery/pkg/runtime#Scheme
-RBAC in k8s :: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
-K8s API guide line :: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md
-Logging API : https://github.com/go-logr/logr
-Admission hook for CRD : https://kubebuilder.io/reference/admission-webhook.html
-Request Object : https://pkg.go.dev/sigs.k8s.io/controller-runtime/pkg/reconcile#Request
-NameSpacedName : https://pkg.go.dev/sigs.k8s.io/controller-runtime/pkg/client#ObjectKey
+https://kubebuilder.io/  
+https://github.com/kubernetes-sigs/kubebuilder/tree/master/docs/book/src/cronjob-tutorial/testdata/project  
+https://github.com/kubernetes-sigs/kustomize  
+https://pkg.go.dev/sigs.k8s.io/controller-runtime  
+What is scheme :: https://pkg.go.dev/k8s.io/apimachinery/pkg/runtime#Scheme  
+RBAC in k8s :: https://kubernetes.io/docs/reference/access-authn-authz/rbac/  
+K8s API guide line :: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md  
+Logging API : https://github.com/go-logr/logr  
+Admission hook for CRD : https://kubebuilder.io/reference/admission-webhook.html  
+Request Object : https://pkg.go.dev/sigs.k8s.io/controller-runtime/pkg/reconcile#Request  
+NameSpacedName : https://pkg.go.dev/sigs.k8s.io/controller-runtime/pkg/client#ObjectKey  
