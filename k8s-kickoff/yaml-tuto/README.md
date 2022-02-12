@@ -155,6 +155,27 @@ So let’s review.  We have:
 
 Basically, whatever structure you want to put together, you can do it with those two structures !!
 
+More example of creating a pod in kubernetes using a yaml file:  
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rss-site
+  labels:
+    app: web
+spec:
+  containers:
+    - name: front-end
+      image: nginx
+      ports:
+        - containerPort: 80
+    - name: rss-reader
+      image: nickchase/rss-php-nginx:v1
+      ports:
+        - containerPort: 88
+```
+
 
 
 ### Reference ::
