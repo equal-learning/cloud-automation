@@ -2,6 +2,11 @@
 
 Go is a «  C-like language » or « C for the 21st century»  
 
+GO genealogy ::  
+
+![genealogy](./imgs/goinheritence.png)
+
+
 Go, inherits C & Pascal.  
 
 From, C, Go inherited, its expression syntax, control-flow statements, basic data types, 
