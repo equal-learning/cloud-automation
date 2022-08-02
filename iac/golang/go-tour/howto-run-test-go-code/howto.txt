@@ -1,0 +1,37 @@
+
+# Go code organizatin ::
+
+repository
+  + module (go.mod)
+      + package
+	        +program (source code)
+
+Go "programs" are organized into packages.
+A "package" is a collection of source files in the same directory that are compiled together.
+Functions, types, variables, and constants defined in one source file are **visible** to all other source files within the same package.
+
+A "module" is a collection of related Go packages that are released together.
+
+A "repository" contains one or more modules. A Go repository typically contains only one module, located at the root of the repository.
+
+A "module path", the import path prefix for all packages within the module.
+
+A "import path", a string used to import a package. A package's import path is its module path joined with its subdirectory within the module.
+Ex - For example, the module github.com/google/go-cmp contains a package in the directory cmp/. That package's import path is github.com/google/go-cmp/cmp.
+
+Note : Packages in the standard library do not have a module path prefix.
+
+
+
+
+mkdir hello
+cd hello
+go mod init example/hello    # create a gomodule
+go install full_path/example/hello   # build & install : Produces an "executable binary". It then installs that binary as $HOME/go/bin/hello
+
+
+
+
+
+Reference :: https://go.dev/doc/code
+
