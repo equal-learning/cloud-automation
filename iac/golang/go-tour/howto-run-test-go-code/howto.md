@@ -16,10 +16,13 @@ bin/: location of compiled executable programs built by Go.
 
 # Code organizatin in a Go program ::
 
+````
 repository
   + module (go.mod)
       + package
 	        +program (source code)
+
+````
 
 Go "programs" are organized into packages.
 A "package" is a collection of source files in the same directory that are compiled together.
@@ -48,7 +51,7 @@ Note : If you are using IDE like VSCODE, then you need to add the module folder 
 
 hello.go
 
-``
+````
 package main
 
 import "fmt"
@@ -57,7 +60,7 @@ func main() {
     fmt.Println("Hello, world.")
 }
 
-``
+````
 
 # Build & install your program
 
@@ -101,7 +104,7 @@ The go command locates the repository containing a given module path by requesti
 
 Let us write a package first and later import it !
 
-```
+````
 // Package morestrings implements additional functions to manipulate UTF-8
 // encoded strings, beyond what is provided in the standard "strings" package.
 package morestrings
@@ -115,7 +118,7 @@ func ReverseRunes(s string) string {
     return string(r)
 }
 
-```
+````
 
 Because our ReverseRunes function begins with an ***upper-case letter***, it is exported, and can be used in other packages that import our morestrings package.
 
