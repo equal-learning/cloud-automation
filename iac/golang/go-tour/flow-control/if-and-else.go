@@ -3,7 +3,7 @@ IF and ELSE ::
 
 Variables declared inside an if short statement are also available inside any of the else blocks.
 
- */
+*/
 
 package main
 

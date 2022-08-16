@@ -8,7 +8,7 @@ The receiver appears in its own argument list between the func keyword and the m
 
 In this example, the Abs method has a receiver of type Vertex named v.
 
- */
+*/
 
 package main
 
@@ -21,7 +21,7 @@ type Vertex struct {
 	X, Y float64
 }
 
-func (v Vertex) Abs() float64 {    // Remark :: (v Vertext) is a receiver
+func (v Vertex) Abs() float64 { // Remark :: (v Vertext) is a receiver
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 

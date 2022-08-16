@@ -17,7 +17,7 @@ The example shows variables of several types, and also that variable declaration
 The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems.
 When you need an integer value you SHOULD use int unless you have a specific reason to use a sized or unsigned integer type.
 
- */
+*/
 
 package main
 
@@ -30,7 +30,6 @@ var (
 	ToBe   bool       = false
 	MaxInt uint64     = 1<<64 - 1
 	z      complex128 = cmplx.Sqrt(-5 + 12i)
-
 )
 
 func main() {

@@ -19,8 +19,7 @@ If not, ok will be false and t will be the zero value of type T, and no panic oc
 
 Note the similarity between this syntax and that of reading from a map.
 
- */
-
+*/
 
 package main
 
@@ -38,6 +37,6 @@ func main() {
 	f, ok := i.(float64)
 	fmt.Println(f, ok)
 
-	f = i.(float64)  // Remark ::  panic
+	f = i.(float64) // Remark ::  panic
 	fmt.Println(f)
 }

@@ -4,7 +4,7 @@ Slice of slices ::
 
 Slices can contain any type, including other slices.
 
- */
+*/
 
 package main
 
@@ -15,7 +15,7 @@ import (
 
 func main() {
 	// Create a tic-tac-toe board.
-	board := [][]string{         // Remark :: A slice of type slice of string !!
+	board := [][]string{ // Remark :: A slice of type slice of string !!
 		[]string{"_", "_", "_"},
 		[]string{"_", "_", "_"},
 		[]string{"_", "_", "_"},

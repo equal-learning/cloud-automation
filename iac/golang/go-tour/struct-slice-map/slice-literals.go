@@ -10,7 +10,7 @@ And this creates the same array as above, then builds a slice that references it
 
 []bool{true, true, false}
 
- */
+*/
 
 package main
 

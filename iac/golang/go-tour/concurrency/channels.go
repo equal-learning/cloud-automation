@@ -19,7 +19,7 @@ The example code sums the numbers in a slice, distributing the work between two 
 Once both goroutines have completed their computation, it calculates the final result.
 
 
- */
+*/
 
 package main
 
@@ -30,16 +30,16 @@ func sum(s []int, c chan int) {
 	for _, v := range s {
 		sum += v
 	}
-	c <- sum           // send sum to c
+	c <- sum // send sum to c
 }
 
 func main() {
 	s := []int{7, 2, 8, -9, 4, 0}
 
-	c := make(chan int)      // Remark :: create a channel
+	c := make(chan int) // Remark :: create a channel
 	go sum(s[:len(s)/2], c)
 	go sum(s[len(s)/2:], c)
-	x, y := <-c, <-c     // receive sum from c  // Remark :: synchronization :: channel c waits "until" sums are computed
+	x, y := <-c, <-c // receive sum from c  // Remark :: synchronization :: channel c waits "until" sums are computed
 
 	fmt.Println(x, y, x+y)
 }

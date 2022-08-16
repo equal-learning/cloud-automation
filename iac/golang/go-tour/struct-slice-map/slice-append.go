@@ -13,7 +13,7 @@ If the backing array of s is too small to fit all the given values a BIGGER arra
 The returned slice will point to the newly allocated array.
 
 
- */
+*/
 
 package main
 

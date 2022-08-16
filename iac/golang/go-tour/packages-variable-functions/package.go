@@ -1,10 +1,10 @@
-package main   // main packaged : Programs start running in package main
+package main // main packaged : Programs start running in package main
 
 import (
 	"fmt"
 	"math/rand"
 )
 
-func main(){
+func main() {
 	fmt.Println("My favorite number is  :", rand.Intn(10))
 }

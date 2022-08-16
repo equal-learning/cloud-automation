@@ -2,7 +2,7 @@
 
 Switch without a condition is the same as switch true.
 
- */
+*/
 
 package main
 

@@ -14,8 +14,7 @@ Goroutines run in the same address space, so "access to shared memory must be sy
 The sync package provides useful primitives, although you won't need them much in Go as there are other primitives.
 
 
- */
-
+*/
 
 package main
 
@@ -32,6 +31,6 @@ func say(s string) {
 }
 
 func main() {
-	go say("world")  // Remark :: runs in a separate thread
+	go say("world") // Remark :: runs in a separate thread
 	say("hello")
 }

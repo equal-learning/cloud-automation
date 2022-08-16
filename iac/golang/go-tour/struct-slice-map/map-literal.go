@@ -6,7 +6,7 @@ Map literals are like struct literals, but the keys are required.
 
 If the top-level type is just a type name, you can omit it from the elements of the literal.
 
- */
+*/
 
 package main
 
@@ -26,7 +26,7 @@ var m = map[string]Vertex{
 }
 
 var m_synt_sugar = map[string]Vertex{
-	"Bell Labs": {40.68433, -74.39967},     // Remark : Vertex omitted !!
+	"Bell Labs": {40.68433, -74.39967}, // Remark : Vertex omitted !!
 	"Google":    {37.42202, -122.08408},
 }
 

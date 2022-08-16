@@ -10,7 +10,7 @@ For example, the adder function returns a closure. Each closure is bound to its 
 
 Remark :: Easy to implement the function "that can recall"
 
- */
+*/
 
 package main
 
@@ -18,7 +18,7 @@ import "fmt"
 
 func adder() func(int) int {
 	sum := 0
-	return func(x int) int {
+	return func(x int) int { // returing a closure (which lookes like first class functions !!)
 		sum += x
 		return sum
 	}

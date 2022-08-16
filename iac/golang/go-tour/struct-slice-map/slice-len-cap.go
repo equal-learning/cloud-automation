@@ -12,7 +12,7 @@ The length and capacity of a slice s can be obtained using the expressions len(s
 
 You can extend a slice's length by re-slicing it, provided it has sufficient capacity. Try changing one of the slice operations in the example program to extend it beyond its capacity and see what happens.
 
- */
+*/
 
 package main
 

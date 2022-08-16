@@ -5,7 +5,7 @@ SWITCH statement ::
 A switch statement is a shorter way to write a sequence of if - else statements.
 It runs the first case whose value is equal to the condition expression.
 
- */
+*/
 
 package main
 

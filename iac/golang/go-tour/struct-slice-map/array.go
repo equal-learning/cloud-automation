@@ -12,7 +12,7 @@ declares a variable a as an array of ten integers.
 
 An array's length is part of its type, so arrays cannot be resized.
 
- */
+*/
 
 package main
 
@@ -25,6 +25,6 @@ func main() {
 	fmt.Println(a[0], a[1])
 	fmt.Println(a)
 
-	primes := [6]int{2, 3, 5, 7, 11, 13}  // Declaration & initialization at the same time
+	primes := []int{2, 3, 5, 7, 11, 13} // Declaration & initialization at the same time
 	fmt.Println(primes)
 }

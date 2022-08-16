@@ -4,12 +4,12 @@ Interfaces ::
 
 An interface type is defined as a set of method signatures.
 
-A value of interface type can hold any value that implements those methods.
+A value of interface type can hold any value that implements those methods. Thus the value become CALLABLE.
 
 Note: There is an error in the example code on line 22.
 Vertex (the value type) doesn't implement Abser because the Abs method is defined only on *Vertex (the pointer type).
 
- */
+*/
 
 package main
 
@@ -18,21 +18,21 @@ import (
 	"math"
 )
 
-type Abser interface {    // Remark : An interface type is defined as a set of method signatures.
+type Abser interface { // Remark : An interface type is defined as a set of method signatures.
 	Abs() float64
 }
 
 func main() {
-	var a Abser    // :: Remark :: A value of interface type can hold any value that implements its methods.
+	var a Abser // :: Remark :: A value of interface type can hold any value that implements its methods.
 	f := MyFloat(-math.Sqrt2)
 	v := Vertex{3, 4}
 
-	a = f              // Remark :: a MyFloat implements Abser
-	a = &v            // Remark :: a *Vertex implements Abser
+	a = f  // Remark :: a MyFloat is callable as it implements the methods of Abser
+	a = &v // Remark :: a *Vertex is callable as it implements the method of Abser
 
 	// In the following line, v is a Vertex (not *Vertex)
 	// and does NOT implement Abser.
-	a = v       // Remark :: It is an error !!!!
+	a = v // Remark :: error, because the methods of Abse are not implemented on this type !!!!
 
 	fmt.Println(a.Abs())
 }

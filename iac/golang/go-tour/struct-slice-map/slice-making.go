@@ -9,13 +9,13 @@ The make function allocates a zeroed array and returns a slice that refers to th
 a := make([]int, 5)  // len(a)=5
 To specify a capacity, pass a third argument to make:
 
-b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+b := make([]int, 0, 5) // len(b)=0, cap(b)=5 // Note the difference between length & capacity
 
 b = b[:cap(b)] // len(b)=5, cap(b)=5
 b = b[1:]      // len(b)=4, cap(b)=4
 
 
- */
+*/
 
 package main
 

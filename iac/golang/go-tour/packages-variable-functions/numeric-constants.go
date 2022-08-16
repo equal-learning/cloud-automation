@@ -6,7 +6,7 @@ Numeric constants are high-precision values.
 An untyped constant takes the type needed by its context.
 
 Try printing needInt(Big) too.
- */
+*/
 
 package main
 
@@ -29,4 +29,5 @@ func main() {
 	fmt.Println(needInt(Small))
 	fmt.Println(needFloat(Small))
 	fmt.Println(needFloat(Big))
+
 }

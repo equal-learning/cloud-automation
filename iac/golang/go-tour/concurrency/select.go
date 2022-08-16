@@ -7,8 +7,7 @@ The select statement lets a goroutine "wait on multiple communication operations
 A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready.
 
 
- */
-
+*/
 
 package main
 
@@ -17,11 +16,11 @@ import "fmt"
 func fibonacci(c, quit chan int) {
 	x, y := 0, 1
 	for {
-		select {         // remark :: at each iteration one of the ready conditions selected randomly is executed
-		case c <- x:     // remark :: c is read till 9th fibonacci number
+		select { // remark :: at each iteration one of the ready conditions selected randomly is executed
+		case c <- x: // remark :: c is read till 9th fibonacci number
 			x, y = y, x+y
 		case <-quit:
-			fmt.Println("quit")    // remark :: waits till the 9th fibonacci number
+			fmt.Println("quit") // remark :: waits till the 9th fibonacci number
 			return
 		}
 	}

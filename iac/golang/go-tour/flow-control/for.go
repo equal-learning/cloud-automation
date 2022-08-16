@@ -4,7 +4,7 @@ FOR loop
 
 Go has only one looping construct, the for loop.
 
- */
+*/
 
 package main
 
@@ -17,9 +17,8 @@ func main() {
 	}
 	fmt.Println(sum)
 
-
 	// The init and post statements are optional
-	for ; sum < 1000; {
+	for sum < 1000 {
 		sum += sum
 	}
 	fmt.Println(sum)
