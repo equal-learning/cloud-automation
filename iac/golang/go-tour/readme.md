@@ -72,3 +72,10 @@
 - channel closing
 - routine select : wait on multiple coditions
 - routine select default : run when no waiting condition is ready
+
+
+Reference ::  
+
+[Coding Guideline](https://go.dev/doc/effective_go)  
+[Testing Guideline](https://go.dev/doc/code)  
+[Packaging Guideline](https://pkg.go.dev/cmd/go)  
