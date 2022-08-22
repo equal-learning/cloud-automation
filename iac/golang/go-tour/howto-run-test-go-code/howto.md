@@ -144,7 +144,7 @@ func main() {
 
 `````
 
-$ go install absolute_path/example/hello
+$ go install absolute_path/example/hello   // it will copy the source code (not the binary !)
 $ export PATH=$PATH:$(dirname $(go list -f '{{.Target}}' .))
 $ hello
 

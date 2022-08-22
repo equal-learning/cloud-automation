@@ -23,14 +23,14 @@
 - if else
 - if with a short statement
 - for
-- for ever
+- for ever : for {}
 - for as while
 - defer executing to after the return of the function call
 - defer stacking (lifo)
 - switch
 - switch with no condition
 
-## pointer struct slice map struct
+## pointer struct slice map
 - pointer
 - array
 - slice
@@ -44,7 +44,7 @@
 - map
 - map mutation
 - map literal
-- struct user-defined type
+- struct composite type
 - struct fields
 - struct literals
 - struct tags

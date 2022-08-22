@@ -39,7 +39,8 @@ func main() {
 	c := make(chan int) // Remark :: create a channel
 	go sum(s[:len(s)/2], c)
 	go sum(s[len(s)/2:], c)
-	x, y := <-c, <-c // receive sum from c  // Remark :: synchronization :: channel c waits "until" sums are computed
+	x, y := <-c, <-c // receive sum from c  // Remark :: in-built synchronization :: channel c waits "until" sums are computed.
+	// Remark :: It is the responsibility of the channel **distribute** the result once it is available. In that way readers are relieved from reading by themselves.
 
 	fmt.Println(x, y, x+y)
 }

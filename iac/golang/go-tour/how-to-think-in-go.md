@@ -164,11 +164,14 @@ Worker
 
 // The LB will send request to the most lightly loaded worker.
 
+```
 Func (w *Worker) work(done chan *Worker) {
 	for {
 	    req := <-w.requests  // get Request from load balancer
             req.c <- req.fn()    //call fn and send result to requester
             done  <- w           // tell balancer we've finished this job
+
+```
 
 The channel of requests (w.requests) delivers requests to each worker.
 The LB tracks the number of pending requests as a measure of load.
@@ -216,13 +219,17 @@ func (p Pool) Less(i,j int) bool {
 ```
 And in each Worker, we keep a count of pending operations.
 
+```
 type Worker struct {
 	requests chan Request    // work to do (a buffered channel)
 	pending  int             // count of pending tasks
 	index    int             // index in the heap
 }
+```
 
 Use the heap to maintain balance,
+
+```
 
 // send request to worker
 fun (b *Balancer) dispatch(req Request) {
@@ -239,6 +246,8 @@ func (b *Balancer) completed(w *Worker) {
 	heap.Push(&b.pool, w)             // put it back where it belongs    
 
 }
+
+```
 
 Channels are **first-class** values. We've built a heap of channels to multiplex and load balance.
 

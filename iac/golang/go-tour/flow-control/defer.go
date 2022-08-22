@@ -12,7 +12,7 @@ package main
 import "fmt"
 
 func main() {
-	defer fmt.Println("world")
+	defer fmt.Println("world") // call this functions just before calling return
 
 	fmt.Println("hello")
 }

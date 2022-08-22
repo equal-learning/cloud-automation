@@ -3,13 +3,12 @@
 FUNCTION CLOSURE ::
 
 Go functions may be closures.
-A closure is a function value that references variables from outside its body.
+A closure is a function value that references variables from **outside its body**.
 The function may access and assign to the referenced variables; in this sense the function is "BOUND" to the variables.
 
-For example, the adder function returns a closure. Each closure is bound to its OWN sum variable.
+For example, the adder function returns a closure. Each closure is bound to its **OWN** sum variable.
 
 Remark :: Easy to implement the function "that can recall"
-
 */
 
 package main
