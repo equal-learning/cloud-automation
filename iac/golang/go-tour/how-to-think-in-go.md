@@ -285,6 +285,8 @@ No. Every name is relative to a package.
 What is defer ?
 Right before returning the functiona call, execute something. It is a dynamic call (meaning not scoped).
 
+Go Programming by Rob Pike and Russ Cox at Google I/O 2010] (https://www.youtube.com/watch?v=jgVhBThJdXc)
+
 
 
 
