@@ -18,6 +18,9 @@ Go is and Go is not ::
 - intended for program structure, not maximum performance !!
 - but still can keep all the cores humming nicely
 - ... and some programs are nicer even if not parallel at all
+<> Compiles into a single binary
+- Using static linking, Go actually combining all dependency libraries and modules into **one single binary** file based 
+   on OS type and architecture.”
 
 A specification of behavior ::
 
@@ -284,6 +287,11 @@ No. Every name is relative to a package.
 
 What is defer ?
 Right before returning the functiona call, execute something. It is a dynamic call (meaning not scoped).
+
+
+References :
+
+[Go docs] ( https://go.dev/doc/)
 
 Go Programming by Rob Pike and Russ Cox at Google I/O 2010] (https://www.youtube.com/watch?v=jgVhBThJdXc)
 
