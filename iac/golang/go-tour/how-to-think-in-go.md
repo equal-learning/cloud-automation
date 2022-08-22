@@ -12,6 +12,7 @@ Go is and Go is not ::
 - methods on type, but not classes or sub-classes
 <> Go is mostly implicit not explicit
 - types are inferred not declared
+- go is stically typed (compiler must be able to determine the type ! )
 - objects have interfaces but they are **derived**, not specified
 <> Go is concurrent not parallel ( is Scala faire on this point ? )
 - intended for program structure, not maximum performance !!
