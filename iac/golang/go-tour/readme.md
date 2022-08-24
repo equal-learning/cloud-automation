@@ -33,7 +33,7 @@
 ## pointer struct slice map
 - pointer
 - array
-- slice
+- slice : https://go.dev/blog/slices-intro
 - slice length & capacity
 - slice nil
 - slice range
