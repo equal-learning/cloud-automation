@@ -26,7 +26,7 @@
 - for ever : for {}
 - for as while
 - defer executing to after the return of the function call
-- defer stacking (lifo)
+- defer stacking (lifo) : https://go.dev/blog/defer-panic-and-recover
 - switch
 - switch with no condition
 
