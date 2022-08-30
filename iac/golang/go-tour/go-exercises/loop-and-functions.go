@@ -5,7 +5,8 @@ import (
 )
 
 func Sqrt(x float64) float64 {
-	z := float64(1)
+
+	z := float64(1) // first guess
 
 	for i := 0; i < 10; i++ {
 

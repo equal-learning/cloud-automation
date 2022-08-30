@@ -2,6 +2,8 @@
 
 "Mutating Maps" ::
 
+m := make(map[string]int) // creating an empty map ready to use
+
 Insert or update an element in map m:
 
 m[key] = elem
@@ -30,17 +32,17 @@ package main
 import "fmt"
 
 func main() {
-	m := make(map[string]int)
+	m := make(map[string]int) // make function returns a map of the given type, initialized and ready for use
 
-	m["Answer"] = 42
+	m["Answer"] = 42 // insert
 	fmt.Println("The value:", m["Answer"])
 
-	m["Answer"] = 48
+	m["Answer"] = 48 // update
 	fmt.Println("The value:", m["Answer"])
 
-	delete(m, "Answer")
+	delete(m, "Answer") // delete
 	fmt.Println("The value:", m["Answer"])
 
-	v, ok := m["Answer"]
+	v, ok := m["Answer"] // test if an element is present
 	fmt.Println("The value:", v, "Present?", ok)
 }

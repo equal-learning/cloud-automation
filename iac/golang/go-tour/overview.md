@@ -23,6 +23,7 @@
 - if else
 - if with a short statement
 - for
+- for with range
 - for ever : for {}
 - for as while
 - defer executing to after the return of the function call
@@ -64,12 +65,20 @@
 - interface Stringer built-in : equivalent to toString
 - interface Error : to handle error
 
+## io (files, network connections, compressors, ciphers, and others)
+- io.reader : interface that represents the read end of a stream of data.
+
+## Generics ( parameterized type )
+- generic function: functions can be written to work on multiple types using type parameters
+- Comparable : == and != operators with generics
+- 
+
 ## Concurrency
 - routine : thread in go (runs in a shared address space)
 - routine mutext : lock unlock to implement mutual exclusivity
 - channel chan <type> :  typed conduite through which values can be sent and recieve synchronously
 - channel with buffer
-- channel closing
+- channel closing : only sender should close it
 - routine select : wait on multiple coditions
 - routine select default : run when no waiting condition is ready
 
@@ -78,4 +87,19 @@ Reference ::
 
 [Coding Guideline](https://go.dev/doc/effective_go)  
 [Testing Guideline](https://go.dev/doc/code)  
-[Packaging Guideline](https://pkg.go.dev/cmd/go)  
+[Packaging Guideline](https://pkg.go.dev/cmd/go)
+[Standard Library](https://pkg.go.dev/std)
+[Go language spec](https://go.dev/ref/spec)
+[Go concurrency pattern, slides](https://go.dev/talks/2012/concurrency.slide#1)
+[Go concurrency pattern, videos](https://www.youtube.com/watch?v=f6kdp27TYZs)
+[Go concurreny pattern, advanced, slides](https://go.dev/talks/2013/advconc.slide#1)
+[Go concurreny pattern, advanced, videos](https://www.youtube.com/watch?v=QDDwwePbDtw)
+[Shared memory by communication](https://go.dev/doc/codewalk/sharemem/)
+[Go programming environment, video](https://vimeo.com/53221558)
+[Go programming environment, slide](https://go.dev/talks/2012/simple.slide#1)
+[Wib application with Go](https://go.dev/doc/articles/wiki/)
+[Functions in Go](https://go.dev/doc/codewalk/functions/)
+
+
+
+
