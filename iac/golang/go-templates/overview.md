@@ -10,6 +10,8 @@ Templates are executed by applying them to a data structure (usually confirming 
 **Annotations** in the template refer to elements of the data structure (typically a field of a structure or a key in a map) to control execution and derive values to be displayed. Execution of the template walks the structure and sets the cursor, represented bu a period ‘.’ called ‘dot’, to the value at the current location in the structure as execution proceeds.
 
 The INPUT text for a template is UTF-8-encoded text in any format.
+Reminder, the **input** text can have dynamic content, meant to be processed by the template and the static content,
+meant to be coppied as it is.
 **Actions** are data evaluation or control structure, delimited by {{ }}.
 All text outside actions is copied to the output unchanged.
 
@@ -42,6 +44,26 @@ will be formatted to,
 ````
 
 # Actions
+
+**Actions** are data evaluation or control structure, delimited by {{ }}.
+All text outside actions is copied to the output unchanged.  
+Action can contain "arguments" and "pipelines", which are **evalutions** of data.
+
+List of actions ::
+
+{{/* a comment */}}
+
+{{- /* a comment with white space trimmed from preceding and following text */ -}}
+
+{{pipeline}}
+
+The default textual representation (the same as would be printed by fmt.Print) of the value of the pipeline is copied
+to the output.
+
+{{if pipeline}} T1 {{end}}
+
+If the value of the pipeline is empty, no output is generated; otherwise, T1 is executed. The empty values are false, 0, any nil pointer or interface value, and any array, slice, map, or string of length zero. Dot is unaffected.
+
 
 
 
