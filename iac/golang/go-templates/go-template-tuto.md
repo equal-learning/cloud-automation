@@ -64,6 +64,18 @@ Comments can span multiple lines.
 
 Note, comment out sections of a template while you are debugging it to simplify troubleshooting.
 
+### Pipelines
+A pipeline is one or more **commands** chained together using the pipe **|** symbol.
+
+A command is a;
+- simple value (argument)
+- function or method call, possibly with multiple arguments.
+
+Ex- 
+```script
+It can demonstrate {{ "output" | print }} using pipelines.
+```
+
 
 
 
