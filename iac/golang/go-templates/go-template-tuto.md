@@ -65,7 +65,7 @@ Comments can span multiple lines.
 Note, comment out sections of a template while you are debugging it to simplify troubleshooting.
 
 ### Pipelines
-A pipeline is one or more **commands** chained together using the pipe **|** symbol.
+A pipeline is one or more **commands chained together** using the pipe **|** symbol.
 
 A command is a;
 - simple value (argument)
@@ -75,6 +75,50 @@ Ex-
 ```script
 It can demonstrate {{ "output" | print }} using pipelines.
 ```
+
+This template line uses pipelining to send the string literal output to the print function.
+
+#### Simple values
+Simple values are typically used as either the sole element in an action, like a string literal
+
+```script
+{{ "output" }}
+```
+which is rendered to the template in place. Simple values can also be referenced to data provided as context to the template. The context is represented by a period **.**, called dot.
+
+#### Literals
+Go templates support following types of literals;
+- string  
+	example : output
+	note : may not contain unescaped line feeds.
+- raw string
+    example : `" out
+    put"`
+- integer
+    example :: 42
+- floating point
+    example :: 72.04
+- boolean
+    example :: true, false
+#### Function calls
+Go templates provides a very limited of functions universally, and instead relies on the specifics implementation to add functions to enhance the user experience. 
+
+```
+{{ "output" | print }}
+```
+
+#### Method calls
+Since Go template provides an empty context to the templates by default, there are no methods to be called.
+
+### Control Structure
+
+
+
+
+
+
+
+
 
 
 
