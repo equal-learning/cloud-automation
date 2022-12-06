@@ -144,7 +144,7 @@ To simplify the appearance of if-else chains, the else action of any if may incl
 {{ if pipeline }} T1 {{ else }} {{ if pipeline }} T0 {{ end }}{{ end }}
 ```
 
-Following is a example of a template that uses ``ìf```and the ``èq``` function to branch between outputs,
+Following is a example of a template that uses ***if*** and the ***eq*** function to branch between outputs,
 
 ```script
 {{ if eq $B 1 }} B is 1 {{ else }} B is not 1 {{end}}
