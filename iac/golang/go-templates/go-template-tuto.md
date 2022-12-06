@@ -6,6 +6,9 @@
 ## Introduction ::
 Go's template designe to be **extended** and provides access to **data objects** and **additional functions** that are **passed** into the template engine **programmatically**.
 
+![Go Template Engine](../imgs/gotmps.jpg)
+
+
 ## A tour of basic Go template ::
 
 ```script
