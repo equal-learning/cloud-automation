@@ -117,7 +117,7 @@ Since Go template provides an empty context to the templates by default, there a
 ### Control Structure
 
 Control structures, used for providing **branching**, **iteration**, and **sub-templates**. 
-The [doc](https://pkg.go.dev/text/template) of control structure uses T0 and T1 as **placeholders* for the specific template content that would be contained there. T0 and T1 might see a different version of dot depending on the control structure that is generating them. For example, ```with``` and ```range``` redefines dot to a new scope when their pipeline is non-empty.
+The [doc](https://pkg.go.dev/text/template) of control structure uses T0 and T1 as **placeholders** for the specific template content that would be contained there. T0 and T1 might see a different version of dot depending on the control structure that is generating them. For example, ```with``` and ```range``` redefines dot to a new scope when their pipeline is non-empty.
 
 List of Control Structures ::
 
@@ -126,7 +126,29 @@ List of Control Structures ::
 ```script
 {{if pipeline}} T1 {{end}}
 ```
+If the value of the pipeline is empty, no output is generated; otherwise, T1 is executed. The empty values are false, 0, any nil pointer or interface value, and any array, slice, map, or string or length zero. Dot is unaffected.
 
+```script
+{{ if pipeline }} T1 {{ else }} T0 {{ end }}
+```
+
+If the value of the pipeline is empty, T0 is executed; otherwise T1 is executed. Dot is unaffected.
+
+```script
+{ {if pipeline }} T1 {{ else if pipeline }} T0 {{ end }}
+```
+
+To simplify the appearance of if-else chains, the else action of any if may include another if directly; the effect is same;
+
+```script
+{{ if pipeline }} T1 {{ else }} {{ if pipeline }} T0 {{ end }}{{ end }}
+```
+
+Following is a example of a template that uses ``ìf```and the ``èq``` function to branch between outputs,
+
+```script
+{{ if eq $B 1 }} B is 1 {{ else }} B is not 1 {{end}}
+````
 
 
 
