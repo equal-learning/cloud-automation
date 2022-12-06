@@ -111,11 +111,21 @@ Go templates provides a very limited of functions universally, and instead relie
 ```
 
 #### Method calls
+
 Since Go template provides an empty context to the templates by default, there are no methods to be called.
 
 ### Control Structure
 
+Control structures, used for providing **branching**, **iteration**, and **sub-templates**. 
+The [doc](https://pkg.go.dev/text/template) of control structure uses T0 and T1 as **placeholders* for the specific template content that would be contained there. T0 and T1 might see a different version of dot depending on the control structure that is generating them. For example, ```with``` and ```range``` redefines dot to a new scope when their pipeline is non-empty.
 
+List of Control Structures ::
+
+**if**  
+
+```script
+{{if pipeline}} T1 {{end}}
+```
 
 
 
