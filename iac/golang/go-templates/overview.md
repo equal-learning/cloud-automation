@@ -261,11 +261,4 @@ The syntax of such definitions is to surround each template declaration with a "
 The define action names the template being created by providing a string constant. Here is a simple example:
 
 
-
-
-
-
-
-
-
 Reference : [Go Template Doc ](https://pkg.go.dev/text/template)
