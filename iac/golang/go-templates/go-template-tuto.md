@@ -213,6 +213,8 @@ Go template provides the following funtions,
 
 #### Functions
 
+```script
+
 **and**
 
 Returns the boolean AND of its arguments by returning the first empty argument or the last argument, that is "and x y" behaves as "if x then y else x".
@@ -245,22 +247,30 @@ Same as Go syntax, fat.Sprintf
 **println**
 Same as Go syntax, fmt.Sprintln
 
+```
+
 #### Comparaison Functions
+
+```script
 **eq** : Returns the boolean truth of arg1 == arg2
 **ne** : Returns the boolean truth of arg1 != arg2
 **lt** : Returns the boolean truth of arg1 < arg2
 **le** : Returns the boolean truth of arg1 <= arg2
 **gt** : Returns the boolean truth of arg1 < arg2
 **ge** : Returns the boolean truth of arg1 >= arg2
+```
+
 
 #### Specialized Output Functions
 
+```script
 **html**
 Returns the escaped HTML equivalent of the textual representation of its arguments.
 **js**
 Returns the escaped JavaScript equivalent of the textual representation of its arguments.
 **urlquery**  
 Returns the escaped value of the textual representation of its arguments in a form suitable for embedding in a URL query.
+```
 
 
 
