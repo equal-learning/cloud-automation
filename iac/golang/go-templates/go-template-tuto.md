@@ -152,43 +152,58 @@ Following is a example of a template that uses ***if*** and the ***eq*** functio
 
 **range**  
 
+```script
 {{range pipeline}} T1 {{end}}
+```
 
 The value of the pipeline must be an iterable (array/slice/map/channel). If the value of the pipeline has length zero, do is unaffected and T0 is executed; otherwise, dot is set to successive elements of the iterable. 
 
 **with**
 
+```script
 {{with pipeline}} T1 {{else}} T0 {{end}}
+```
 
 If the value of the pipeline is empty, dot is unaffected and T0 is executed; otherwise, do is set to the value of the pipeline and T1 is executed.
 
 **define**
 
+```script
 {{define "name"}} T1 {{end}}
+```
 
 Create template with the specified name that can be invoked using a ***template*** control structure.
 
 **template**
 
+```script
 {{template ""name""}}
+```
 
 The template with the specified name is executed with nil data.
 
+```script
 {{template ""name"" pipeline}}
+```
 
 The template with the specified name is executed with dot set to the value of the pipeline.
 
 **block**
 
+```script
 {{block "name" pipeline}} T1 {{end}}
+```
 
 A block is shorthand for defining a template.
 
+```script
 {{define "name"}} T1 {{end}}
+```
 
 and then executing it in place,
-
+```script
 {{template "name" pipeline}}
+```
 
 The typical use is to define a set of root templates that are then customized by redefining the block template within.
 
