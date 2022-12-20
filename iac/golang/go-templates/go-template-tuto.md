@@ -150,6 +150,110 @@ Following is a example of a template that uses ***if*** and the ***eq*** functio
 {{ if eq $B 1 }} B is 1 {{ else }} B is not 1 {{end}}
 ````
 
+**range**  
+
+{{range pipeline}} T1 {{end}}
+
+The value of the pipeline must be an iterable (array/slice/map/channel). If the value of the pipeline has length zero, do is unaffected and T0 is executed; otherwise, dot is set to successive elements of the iterable. 
+
+**with**
+
+{{with pipeline}} T1 {{else}} T0 {{end}}
+
+If the value of the pipeline is empty, dot is unaffected and T0 is executed; otherwise, do is set to the value of the pipeline and T1 is executed.
+
+**define**
+
+{{define "name"}} T1 {{end}}
+
+Create template with the specified name that can be invoked using a ***template*** control structure.
+
+**template**
+
+{{template ""name""}}
+
+The template with the specified name is executed with nil data.
+
+{{template ""name"" pipeline}}
+
+The template with the specified name is executed with dot set to the value of the pipeline.
+
+**block**
+
+{{block "name" pipeline}} T1 {{end}}
+
+A block is shorthand for defining a template.
+
+{{define "name"}} T1 {{end}}
+
+and then executing it in place,
+
+{{template "name" pipeline}}
+
+The typical use is to define a set of root templates that are then customized by redefining the block template within.
+
+### Function List
+
+Go template provides the following funtions,
+
+#### Functions
+
+**and**
+
+Returns the boolean AND of its arguments by returning the first empty argument or the last argument, that is "and x y" behaves as "if x then y else x".
+
+**call**
+
+Returns the result of calling the first argument, which must be a function, with the remaining arguments as parameters. Thus "call.X.Y 1 2" is, in Go notation, dot.X.Y(1,2) where Y is a func-valued field, map entry, or the like.
+
+**index**  
+Returns the results of indexing its first argument by the following arguments. Thus ***index x 1 2 3*** is, in Go syntax, x[1][2][3]. Each indexed item must be a map, slice, or array.
+
+**slice**
+Slice returns the result of slicing it first argument by the remaining arguments Thus, slice x 1 2 is, Go syntax x[1:2]
+
+**len**
+Returns the integer length of its argument
+
+**not**
+Returns the boolean negation of its single argument.
+
+**or**
+Returns the boolean OR of its arguments by returning the first non-empty argument or the last argument, that is, "or x u" behaves as "if x then x else y
+
+**print**
+Same as Go syntax, fmt.Sprint
+
+**printf**
+Same as Go syntax, fat.Sprintf
+
+**println**
+Same as Go syntax, fmt.Sprintln
+
+#### Comparaison Functions
+**eq** : Returns the boolean truth of arg1 == arg2
+**ne** : Returns the boolean truth of arg1 != arg2
+**lt** : Returns the boolean truth of arg1 < arg2
+**le** : Returns the boolean truth of arg1 <= arg2
+**gt** : Returns the boolean truth of arg1 < arg2
+**ge** : Returns the boolean truth of arg1 >= arg2
+
+#### Specialized Output Functions
+
+**html**
+Returns the escaped HTML equivalent of the textual representation of its arguments.
+**js**
+Returns the escaped JavaScript equivalent of the textual representation of its arguments.
+**urlquery**  
+Returns the escaped value of the textual representation of its arguments in a form suitable for embedding in a URL query.
+
+
+
+
+
+References ::
+[Go Template tuto HashiCorp](https://developer.hashicorp.com/nomad/tutorials/templates/go-template-syntax)
+
 
 
 
