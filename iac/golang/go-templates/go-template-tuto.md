@@ -26,13 +26,21 @@ And conditionals:
 {{ $B := 2 }}{{ if eq $B 1 }}B is 1{{ else }}B is 2{{ end }}
 ```
 
-### Basic terminology ::
+### Basic terminology :: 
+
+- Template
+- Actions
+- Delimeters
+- Trim Markers
+- Comments
+- Simple Value
+- Literals
 
 #### Template
 It is the **entire text** that is submitted to the **template engine** to be rendered. The template consists of **text** and **actions**.
 All text **outside** of actions is copied to the output **unchanged**.
 
-### Actions
+#### Actions
 
 Actions provide the dynamic components of the template. They are delimited using {{ }}, as illustrated bellow :
 
@@ -47,16 +55,16 @@ Actions provide the dynamic components of the template. They are delimited using
 
 Actions are **composed** of **control structure** or **data evaluation** through **pipelines**.
 
-### Delimiters
+#### Delimiters
 
 Actions are set between a left delimiter **{{ by default** and  a right delimiter **}} by default**. The implementation can use **[[** and **]]** alternatively.
 
-### Trim markers
+#### Trim markers
 Go template outputs everything between actions, including whitespace and line feeds. This can make it challenging to read **nested** template code.
 If an actions’s left delimiter is followed immediately by a minus sign and ASCII space character **{{-**, all trailing white space is trimmed from the immediately preceding text. Likewise, if the right delimiter is preceded by a space and minus sign **-}}**, all leading white space id trimmed from the immediately following text.
 Note, the ASCII space must be present in these trim markers.
 
-### Comments
+#### Comments
 Comments are a special action created using a **/*** immediately following the left delimiter and a ***/** immediately preceding the right delimiter.
 
 ```script
@@ -67,7 +75,7 @@ Comments can span multiple lines.
 
 Note, comment out sections of a template while you are debugging it to simplify troubleshooting.
 
-### Pipelines
+#### Pipelines
 A pipeline is one or more **commands chained together** using the pipe **|** symbol.
 
 A command is a;
