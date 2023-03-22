@@ -1,5 +1,7 @@
 
 
+"Go is an open source programming language that makes it easy to build ***simple***, ***reliable***, and ***efficient*** software."  
+
 Go is a "C-like language" or "C for the 21st century" 
 
 GO genealogy ::  
