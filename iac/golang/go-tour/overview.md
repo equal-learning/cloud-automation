@@ -99,6 +99,7 @@ Reference ::
 [Go programming environment, slide](https://go.dev/talks/2012/simple.slide#1)  
 [Wib application with Go](https://go.dev/doc/articles/wiki/)  
 [Functions in Go](https://go.dev/doc/codewalk/functions/)  
+[Go Tuto From Azure](https://learn.microsoft.com/en-us/training/paths/go-first-steps/)
 
 
 
