@@ -17,10 +17,10 @@ bin/: location of compiled executable programs built by Go.
 # Code organizatin in a Go program ::
 
 ````
-repository
-  + module (go.mod)
+repository   # Contains one or more modules. Typically one module.
+  + module (go.mod)      # Collection of related packages released together
       + package
-	        +program (source code)
+	        +program (source code)   # Collection of related source file compiled together
 
 ````
 
