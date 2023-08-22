@@ -7,6 +7,7 @@ Programming in GO is different from programming in most procedural languages.
 "If you try to write Java* programs in Go, you may become frustrated. If you write Go programs in GO, you will be more productive"
 
 Go is and Go is not ::
+
 <> Go is object-oriented not type-oriented
 - inheritance is not primary (no class and subclass etc). Inheriteance is not the only way to structure a program.
 - methods on type, but not classes or sub-classes
@@ -294,7 +295,7 @@ References :
 [Go docs] ( https://go.dev/doc/)
 
 Go Programming by Rob Pike and Russ Cox at Google I/O 2010] (https://www.youtube.com/watch?v=jgVhBThJdXc)
-
+[Go training from Azure] (https://learn.microsoft.com/en-us/training/modules/go-get-started/1-what-is-go)
 
 
 

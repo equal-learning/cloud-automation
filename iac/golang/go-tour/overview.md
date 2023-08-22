@@ -26,7 +26,7 @@
 - for with range
 - for ever : for {}
 - for as while
-- defer executing to after the return of the function call
+- defer executing to after the return of the function call, to perform various clean-up like tasks.
 - defer stacking (lifo) : https://go.dev/blog/defer-panic-and-recover
 - switch
 - switch with no condition
