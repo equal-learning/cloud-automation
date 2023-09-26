@@ -275,6 +275,10 @@ Such properties make Go programs more malleable, more adaptable, less brittle.
 
 FAQ ::
 
+1. What’s the command for executing and compiling Go apps?
+go run
+2. Where should you place your project files on your workstation? 
+At the workspace directory
 
 How to managed shared state (imposing memory barrier) while writing concurrent program in go ?
 
