@@ -128,6 +128,49 @@ Use Boolean logic in python :
 
 Booleans are a common type in Python. Their value can only ever be one of two things: true or false. Understanding how to use Boolean values is critical, because you need them to write conditional logic.
 
+Use Strings in python :
+
+Python strings are one of the most important and common types in the language. Learning how to interact with strings, including formatting and replacing text, is an essential skill to develop for working with Python code.
+
+Using quotation marks :
+You can enclose Python strings in single, double, or triple quotation marks. Although you can use them interchangeably, it's best to use one type consistently within a project. 
+
+Multiline text
+There are a few different ways to define multiple lines of text as a single variable. The most common ways are:
+
+Use a newline character (\n).
+Use triple quotation marks (""").
+Newline characters separate the text into multiple lines when you print the output:
+
+Some common string methods ::
+
+```bash
+heading = "temperatures and facts about the moon"
+heading_upper = heading.title()
+# Split a String
+temperatures_list = temperatures .split()
+print("Moon" in "This text will describe facts and challenges with space travel")
+# Search & matching for a string
+temperatures = """Saturn has a daytime temperature of -170 degrees Celsius, while Mars has -28 Celsius."""
+print(temperatures.find("Mars"))
+temperatures = """Saturn has a daytime temperature of -170 degrees Celsius, while Mars has -28 Celsius."""
+print(temperatures.count("Mars"))
+print(temperatures.count("Moon"))
+print("The Moon And The Earth".lower())
+print("The Moon And The Earth".upper())
+# Check Content
+temperatures = "Mars Average Temperature: -60 C"
+parts = temperatures.split(':')
+print(parts)
+print(parts[-1])
+print("-60".startswith('-'))
+# Transform Text
+text = "Temperatures on the Moon can vary wildly."
+print("temperatures" in text.lower())
+moon_facts = ["The Moon is drifting away from the Earth.", "On average, the Moon is moving about 4cm every year."]
+print(' '.join(moon_facts))
+```
+
 
 
 References ::
