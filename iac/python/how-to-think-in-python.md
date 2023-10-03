@@ -206,6 +206,228 @@ heading = f"{subject.title()}"   # f-string with function call
 print(heading)
 ```
 
+Mathematic Operation In Python ::  
+
+The mathematic operators available in Python.
+The order of operations.
+How to convert strings to numbers.
+
+Python supports four core mathematics operations, addition, substraction, multiplication, division along with others. 
+
+Operators In Python ::
+
+```bash
+# Addition
+answer = 30 + 12
+difference = 30 - 12
+product = 30 * 12
+quotient = 30 / 12
+quotient = 30 / 12  # floor (round-up) division
+```
+Orders of operations ::
+
+Python honors the order of operation for math.
+
+1. Parentheses
+2. Exponents
+3. Multiplication and division
+4. Addition and subtraction  
+
+```bash
+result_1 = 1032 + 26 * 2
+print(result_1)
+result_2 = 1032 + (26 * 2)
+print(result_2)
+```
+
+```bash
+# Convert String To Number
+demo_int = int('215')
+print(demo_int)
+demo_float = float('215.3')
+print(demo_float)
+# Absolute Value
+print(abs(39 - 16))
+print(abs(16 - 39))
+# Rounding
+print(round(14.5))
+# Math Library
+round_up = ceil(12.5)
+print(round_up)
+round_down = floor(12.5)
+print(round_down)
+```
+
+Python List ::
+
+Lists allow you to store multiple values in a single variable.
+
+- Identify when to use a list.
+- Create a list.
+- Access a particular item in a list by using indexes.
+- Push items to the end of a list.
+- Sort and slice a list.
+
+```bash
+# Create a list
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+# Access list items by index
+print("The first planet is", planets[0])
+# Determine the length of a list
+number_of_planets = len(planets)
+print("There are", number_of_planets, "planets in the solar system.")
+# Add values to lists
+planets.append("Pluto")
+# Remove Value from list
+planets.pop()  # Goodbye, Pluto
+# Use negative index
+print("The first planet is", planets[0])
+print("The last planet is", planets[-1])
+# Find value in a list
+jupiter_index = planets.index("Jupiter")
+print("Jupiter is the", jupiter_index + 1, "planet from the sun")
+```
+# Store Numbers in list
+```bash
+gravity_on_earth = 1.0
+gravity_on_the_moon = 0.166
+gravity_on_planets = [0.378, 0.907, 1, 0.377, 2.36, 0.916, 0.889, 1.12]
+bus_weight = 124054 # in Newtons, on Earth
+print("On Earth, a double-decker bus weighs", bus_weight, "N")
+print("On Mercury, a double-decker bus weighs", bus_weight * gravity_on_planets[0], "N")
+# Largest and smallest number in a list
+print("The lightest a bus would be in the solar system is", bus_weight * min(gravity_on_planets), "N")
+print("The heaviest a bus would be in the solar system is", bus_weight * max(gravity_on_planets), "N")
+```
+# Manipulate List Data
+Python provides robust support for working with the data in lists. This support includes slicing data (examining just a portion) and sorting.
+# Slicing List
+```bash
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets_before_earth = planets[0:2]
+print(planets_before_earth)
+planets_after_earth = planets[3:]
+# Joining List
+amalthea_group = ["Metis", "Adrastea", "Amalthea", "Thebe"]
+galilean_moons = ["Io", "Europa", "Ganymede", "Callisto"]
+regular_satellite_moons = amalthea_group + galilean_moons
+print("The regular satellite moons of Jupiter are", regular_satellite_moons)
+# Sort list
+regular_satellite_moons.sort() # Python sorts a list of strings in alphabetical order and a list of numbers in numeric order
+
+```
+
+While and For Loop In Python ::
+
+- Identify when to use while and for loops.
+- Run a task multiple times by using while loops.
+- Loop over list data by using for loops.
+
+Not : Python has many types that can be looped over. These types are known as iterables.
+```bash
+# While loop
+
+# Create the variable for user input
+user_input = ''
+# Create the list to store the values
+inputs = []
+
+# The while loop
+while user_input.lower() != 'done':
+    # Check if there's a value in user_input
+    if user_input:
+        # Store the value in the list
+        inputs.append(user_input)
+    # Prompt for a new value
+    user_input = input('Enter a new value, or done when done')
+```
+
+For Loop :
+
+```bash
+countdown = [4, 3, 2, 1, 0]
+for number in countdown:
+    print(number)
+print("Blast off!! 🚀")
+```
+Manage data with Python dictionaries :
+
+Python dictionaries allow you to model more complex data. Dictionaries are a collection of key/value pairs, and are very common in Python programs. Their flexibility allows you to dynamically work with related values without having to create classes or objects.
+
+- Identify when to use a dictionary.
+- Create and modify data inside a dictionary.
+- Use dictionary methods to access dictionary data.
+
+```bash
+# Dictionary In Python
+planet = {
+    'name': 'Earth',
+    'moons': 1
+}
+
+print(planet.get('name'))
+wibble = planet.get('wibble') # Returns None !!
+wibble = planet['wibble'] # Throws KeyError !!
+
+#Although the behavior of get and the square brackets ([ ]) is generally the same for retrieving items, there's one key #difference. If a key isn't available, get returns None, and [ ] raises a KeyError.
+
+planet.update({'name': 'Makemake'})
+planet['name'] = 'Makemake'  # Syntactic sugar
+
+# Multiple update at a time
+
+planet.update({
+    'name': 'Jupiter',
+    'moons': 79
+})
+
+# Remove an item
+
+planet.pop('orbital period')
+
+# Complext data type :
+# Dictionaries are able to store any type of a value, including other dictionaries. 
+
+planet['diameter (km)'] = {
+    'polar': 133709,
+    'equatorial': 142984
+}
+print(f'{planet["name"]} polar diameter: {planet["diameter (km)"]["polar"]}')
+
+```
+
+# Dynamic programming with dictionary
+```bash
+# Retreive All Key Values
+rainfall = {
+    'october': 3.5,
+    'november': 4.2,
+    'december': 2.1
+}
+
+for key in rainfall.keys():
+    print(f'{key}: {rainfall[key]}cm')
+
+# Determine if a key exist in a dictionary
+if 'december' in rainfall:
+    rainfall['december'] = rainfall['december'] + 1
+else:
+    rainfall['december'] = 1
+
+# Retreive All Keys
+total_rainfall = 0
+for value in rainfall.values():
+    total_rainfall = total_rainfall + value
+
+```
+
+
+
+
+
+
+
+
 
 References ::
 [link](https://learn.microsoft.com/en-us/training/paths/beginner-python/)
@@ -249,3 +471,35 @@ The .find() and .count() methods.
 The code can be harder to read when many replacements are needed.
 6. How can you round down a number when you use f-strings?
 Use the round() function inside the string, enclosed in braces ({}).
+# Use Mathematical Operation In Python
+1. What function is used to convert a string to an integer?
+int
+2. What function is used to determine an absolute value?
+abs
+3. What operator is used to determine a modulo?
+%
+# List Manipulation
+1. What symbols are used to start and finish a list?
+Brackets: []
+2. Which statement would return the first value in the list planets?
+planets[0]
+3. Which statement would return the last value in the list planets?
+planets[-1]
+4. Which statement would sort the list planets? 
+planets.sort()
+# Loop
+1. What statement would loop over the sequence collection and assign the variable item?
+for item in collection
+2. What is the correct statement to use to unpack variables named left and right from the list turns?
+for left, right in turns
+# Dictionary
+1. What method allows access all key names in a Python dictionary?
+keys
+2. What method can you use to retrieve a value from a dictionary by using the key?
+get
+3. What method can you use to remove a key from a dictionary?
+pop
+
+
+
+
