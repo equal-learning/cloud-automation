@@ -418,9 +418,92 @@ else:
 total_rainfall = 0
 for value in rainfall.values():
     total_rainfall = total_rainfall + value
-
 ```
 
+Functions ::
+
+- Functions can require arguments or make them optional.
+- You can extract reusable code and reuse it in a function.
+- Variable arguments and variable keyword arguments are useful when you don't know the exact inputs.
+
+
+```bash
+# Create function
+def rocket_parts():
+    print("payload, propellant, structure")
+# Function with arguments
+def distance_from_earth(destination):
+    if destination == "Moon":
+        return "238,855"
+    else:
+        return "Unable to compute to that destination"
+
+# Keyword Argument In Python
+rom datetime import timedelta, datetime
+
+def arrival_time(hours=51):
+    now = datetime.now()
+    arrival = now + timedelta(hours=hours)
+    return arrival.strftime("Arrival: %A %H:%M")
+
+# Mixing arguments & Keywork arguments
+from datetime import timedelta, datetime
+
+def arrival_time(destination, hours=51):
+    now = datetime.now()
+    arrival = now + timedelta(hours=hours)
+    return arrival.strftime(f"{destination} Arrival: %A %H:%M")
+
+# Use Variable Argument In Python
+def variable_length(*args):
+    print(args)
+
+# Variable keyword arguments
+def variable_length(**kwargs):
+    print(kwargs)
+```
+
+Error Handling in Python ::
+
+- Read and use error output from exceptions.
+- Properly handle exceptions.
+- Raise exceptions with useful error messages.
+- Use exceptions to control a program's flow.
+
+```bash
+# try and catch
+try:
+     open('config.txt')
+except FileNotFoundError:
+     print("Couldn't find the config.txt file!")
+
+# specific to generalized exception handler
+def main():
+    try:
+        configuration = open('config.txt')
+    except FileNotFoundError:
+        print("Couldn't find the config.txt file!")
+    except IsADirectoryError:
+        print("Found config.txt but it is a directory, couldn't read it")
+    except (BlockingIOError, TimeoutError):   # Grouping multiple exception together
+        print("Filesystem under heavy load, can't complete reading configuration file")
+
+# Accessing details about an exception
+try:
+    open("mars.jpg")
+except FileNotFoundError as err:
+     print("Got a problem trying to read the file:", err)
+
+# access attributes of the error directly. 
+try:
+    open("config.txt")
+except OSError as err:
+     if err.errno == 2:
+         print("Couldn't find the config.txt file!")
+     elif err.errno == 13:
+        print("Found config.txt but couldn't read it")
+
+```
 
 
 
@@ -499,6 +582,30 @@ keys
 get
 3. What method can you use to remove a key from a dictionary?
 pop
+# Function
+1. Can a function that defines arguments be called without arguments?
+No, because defined arguments are required.
+2. Can a function with only keyword arguments be called without any arguments?
+Yes, because keyword arguments are optional when calling a function.
+3. Can a function define arguments and keyword arguments? 
+Yes, but only if arguments are defined before keyword arguments.
+4. What is the minimum number of arguments that a function can accept when you're using variable arguments?
+Zero. There's no need to pass any argument at all when you're using variable arguments.
+5. What is the syntax to declare variable arguments and variable keyword arguments? 
+*args, **kwargs
+# Exception
+1. What are three elements that you might find in a traceback?
+A file path, line number, and exception
+2. What two keywords would you use for handling exceptions?
+try and except
+3. Why would using except Exception be unhelpful?
+Because it can hide what the real problem is
+4. When can it be useful to use as err in an except block?
+When you want to reuse or inspect an exception
+5. What is the right syntax to catch two exceptions in the same except line? 
+except (ValueError, TypeError):
+
+
 
 
 
